@@ -1,2 +1,2 @@
 # tradiercpp
-C++ library for interacting with the Tradier Brokerage API
+C++ library for interacting with the Tradier Brokerage API.
