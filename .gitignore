@@ -1,12 +1,10 @@
-test.cpp
-
-gitCommits/*
-
+# Environment settings
 .env
 .DS_Store
+gitCommits/*
 
-# Prerequisites
-*.d
+# Build output
+/build/
 
 # Compiled Object files
 *.slo
@@ -23,10 +21,6 @@ gitCommits/*
 *.dylib
 *.dll
 
-# Fortran module files
-*.mod
-*.smod
-
 # Compiled Static libraries
 *.lai
 *.la
@@ -37,3 +31,22 @@ gitCommits/*
 *.exe
 *.out
 *.app
+
+# Fortran module files
+*.mod
+*.smod
+
+# Prerequisites
+*.d
+
+# IDE and editor folders
+.vscode/
+.idea/
+
+# Test files not required
+test.cpp
+
+# Temporary files
+*.log
+*.tmp
+
