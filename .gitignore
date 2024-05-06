@@ -1,3 +1,10 @@
+test.cpp
+
+gitCommits/*
+
+.env
+.DS_Store
+
 # Prerequisites
 *.d
 
