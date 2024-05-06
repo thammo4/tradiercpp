@@ -1,0 +1,3 @@
+/Users/thammons/Desktop/msds/tradier/tradiercpp/build/CMakeFiles/TradierCPP.dir
+/Users/thammons/Desktop/msds/tradier/tradiercpp/build/CMakeFiles/edit_cache.dir
+/Users/thammons/Desktop/msds/tradier/tradiercpp/build/CMakeFiles/rebuild_cache.dir
