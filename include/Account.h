@@ -10,6 +10,7 @@ public:
 	Account(const std::string& accountNumber, const std::string& authToken, bool liveTrade=false);
 	void fetchAccountDetails() const;
 	void fetchBalances() const;
+	nlohmann::json getGainLoss() const;
 
 private:
 	std::string accountNumber;
@@ -24,7 +25,7 @@ private:
 	const std::string BALANCES_ENDPOINT 			= "/v1/accounts/{account_id}/balances";
 	const std::string POSITIONS_ENDPOINT 			= "/v1/accounts/{account_id}/positions";
 	const std::string HISTORY_ENDPOINT 				= "/v1/accounts/{account_id}/history";
-	const std::string COST_BASIS_ENDPOINT 			= "/v1/accounts/{account_id}/gainloss";
+	const std::string GAIN_LOSS_ENDPOINT 			= "/v1/accounts/{account_id}/gainloss";
 };
 
 #endif
