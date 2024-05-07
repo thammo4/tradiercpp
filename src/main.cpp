@@ -40,5 +40,13 @@ int main() {
 
 	myAccount.getGainLoss();
 
+
+	//
+	// Fetch Current Positions
+	//
+
+	myAccount.getPositions();
+	std::cout << "----------\n" << std::endl;
+
 	return 0;
 }

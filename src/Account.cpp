@@ -57,3 +57,26 @@ nlohmann::json Account::getGainLoss() const {
 	std::cout << "GAINS/LOSSES\n" << gainLoss.dump(4) << std::endl;
 	return gainLoss;
 }
+
+
+
+
+//
+// Get account's current open positions
+//
+
+nlohmann::json Account::getPositions(const std::vector<std::string>& symbols, bool equities, bool options) const {
+	std::string endpoint = POSITIONS_ENDPOINT;
+	size_t pos = endpoint.find("{account_id}");
+
+	if (pos != std::string::npos) {
+		endpoint.replace(pos, std::string("{account_id}").length(), ACCOUNT_NUMBER);
+	} else {
+		std::cerr << "No account ID in URL string [getPositions]." << std::endl;
+		return {};
+
+	nlohmann::json positions = sendGetRequest(endpoint);
+
+	return {};
+	}
+}

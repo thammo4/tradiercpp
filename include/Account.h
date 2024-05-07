@@ -11,6 +11,7 @@ public:
 	void fetchAccountDetails() const;
 	void fetchBalances() const;
 	nlohmann::json getGainLoss() const;
+	nlohmann::json getPositions(const std::vector<std::string>& symbols={}, bool equities=false, bool options=false) const;
 
 private:
 	std::string accountNumber;
