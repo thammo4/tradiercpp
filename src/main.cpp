@@ -12,5 +12,9 @@ int main() {
 	Account myAccount(accountNumber, authToken, liveTrade);
 	myAccount.fetchAccountDetails();
 
+	std::cout << "----------" << std::endl;
+
+	myAccount.fetchBalances();
+
 	return 0;
 }

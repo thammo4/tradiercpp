@@ -54,8 +54,13 @@ nlohmann::json Tradier::sendGetRequest(const std::string& endpoint) const {
 		} else {
 			std::cout << "URL: " << fullURL << std::endl;
 			std::cout << "\n" << std::endl;
-			std::cout << "Response: " << readBuffer << std::endl;
-			std::cout << "\n" << std::endl;
+
+			//
+			// Comment/uncomment as needed to assist with debugging
+			//
+
+			// std::cout << "Response: " << readBuffer << std::endl;
+			// std::cout << "\n" << std::endl;
 		}
 		curl_easy_cleanup(curl);
 	}
