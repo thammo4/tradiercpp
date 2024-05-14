@@ -27,51 +27,75 @@ size_t Tradier::writeCallback(void* contents, size_t size, size_t nmemb, std::st
 	return newLength;
 }
 
+
+//
+// GET Request Call
+//
+
 nlohmann::json Tradier::sendGetRequest(const std::string& endpoint) const {
+	return sendRequest(endpoint, "GET");
+}
+
+
+//
+// POST Request Call
+//
+
+nlohmann::json Tradier::sendPostRequest(const std::string& endpoint, const std::string& postData) const {
+	return sendRequest(endpoint, "POST", postData);
+}
+
+
+//
+// Base API HTTP Request Function
+//
+
+nlohmann::json Tradier::sendRequest(const std::string& endpoint, const std::string& method, const std::string& postData) const {
 	CURL* curl = curl_easy_init();
 	std::string readBuffer;
 	nlohmann::json jsonResult;
-	struct curl_slist* headers = NULL;
+	struct curl_slist* headers = nullptr;
+
+	//
+	// Convert the map to curl_slist or else compiler will freak out
+	//
 
 	if (curl) {
-		//
-		// Convert the map to curl_slist or else compiler will freak out
-		//
-
 		for (const auto& header : API_HEADERS) {
 			std::string headerValue = header.first + ":" + header.second;
 			headers = curl_slist_append(headers, headerValue.c_str());
 		}
+
 		std::string fullURL = BASE_URL + endpoint;
-		curl_easy_setopt(curl, CURLOPT_URL, (BASE_URL + endpoint).c_str());
+
+		curl_easy_setopt(curl, CURLOPT_URL, fullURL.c_str());
 		curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writeCallback);
 		curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
-		CURLcode res = curl_easy_perform(curl);
 
-		if (res != CURLE_OK) {
-			std::cerr << "ez curl failed: " << curl_easy_strerror(res) << std::endl;
-		} else {
-			std::cout << "URL: " << fullURL << std::endl;
-			std::cout << "\n" << std::endl;
-
-			//
-			// Comment/uncomment as needed to assist with debugging
-			//
-
-			// std::cout << "Response: " << readBuffer << std::endl;
-			// std::cout << "\n" << std::endl;
+		if (method == "POST") {
+			curl_easy_setopt(curl, CURLOPT_POST, 1L);
+			const char* payload = postData.empty() ? "{}" : postData.c_str();
+			curl_easy_setopt(curl, CURLOPT_POSTFIELDS, payload);
+		} else if (method == "GET") {
+			curl_easy_setopt(curl, CURLOPT_HTTPGET, 1L);
 		}
+
+		CURLcode res = curl_easy_perform(curl);
+		if (res != CURLE_OK) {
+			std::cerr << "curl failed " << curl_easy_strerror(res) << std::endl;
+		}
+
 		curl_easy_cleanup(curl);
 	}
 
 	try {
 		jsonResult = nlohmann::json::parse(readBuffer);
 		if (jsonResult.is_null()) {
-			std::cerr << "No API data" << std::endl;
+			std::cerr << "no api data" << std::endl;
 		}
 	} catch (nlohmann::json::exception& e) {
-		std::cerr << "JSON PARSE ERROR: " << e.what() << std::endl;
+		std::cerr << "JSON PARSE ERROR " << e.what() << std::endl;
 	}
 
 	return jsonResult;

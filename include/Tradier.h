@@ -1,5 +1,4 @@
 // FILE: `include/Tradier.h`
-
 #ifndef TRADIER_H
 #define TRADIER_H
 
@@ -13,6 +12,8 @@ public:
 	Tradier(const std::string& accountNumber, const std::string& authToken, bool liveTrade=false);
 	virtual ~Tradier();
 
+	// nlohmann::json startMarketSession() const;
+
 protected:
 	std::string ACCOUNT_NUMBER;
 	std::string AUTH_TOKEN;
@@ -24,7 +25,9 @@ protected:
 	std::string BASE_URL;
 
 	static size_t writeCallback(void* contents, size_t size, size_t nmemb, std::string* s);
+	nlohmann::json sendRequest(const std::string& endpoint, const std::string& method, const std::string& postData="") const;
 	nlohmann::json sendGetRequest(const std::string& endpoint) const;
+	nlohmann::json sendPostRequest(const std::string& endpoint, const std::string& postData) const;
 };
 
 #endif
