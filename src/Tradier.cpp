@@ -1,6 +1,13 @@
 // FILE: `src/Tradier.cpp`
 #include "Tradier.h"
 #include <iostream>
+#include <boost/asio/ssl.hpp>
+#include <boost/beast.hpp>
+#include <boost/beast/ssl.hpp>
+#include <boost/asio/ssl/context.hpp>
+#include <boost/beast/websocket/ssl.hpp>
+#include <boost/asio/ssl/stream.hpp>
+
 
 Tradier::Tradier(const std::string& accountNumber, const std::string& authToken, bool liveTrade)
 	: ACCOUNT_NUMBER(accountNumber),
@@ -67,6 +74,7 @@ nlohmann::json Tradier::sendRequest(const std::string& endpoint, const std::stri
 		}
 
 		std::string fullURL = BASE_URL + endpoint;
+		std::cout << "URL: " << fullURL << std::endl;
 
 		curl_easy_setopt(curl, CURLOPT_URL, fullURL.c_str());
 		curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
@@ -86,7 +94,10 @@ nlohmann::json Tradier::sendRequest(const std::string& endpoint, const std::stri
 			std::cerr << "curl failed " << curl_easy_strerror(res) << std::endl;
 		}
 
+		curl_slist_free_all(headers);
 		curl_easy_cleanup(curl);
+	} else {
+		std::cerr << "Failed CURL initialization." << std::endl;
 	}
 
 	try {
@@ -96,7 +107,96 @@ nlohmann::json Tradier::sendRequest(const std::string& endpoint, const std::stri
 		}
 	} catch (nlohmann::json::exception& e) {
 		std::cerr << "JSON PARSE ERROR " << e.what() << std::endl;
+		return nlohmann::json();
 	}
 
 	return jsonResult;
+}
+
+
+
+//
+// WebSocket Streaming Connection
+//
+
+void Tradier::startWebSocket(const std::string& sessionId) const {
+	std::cout << "START startWebSocket" << std::endl;
+	boost::asio::io_context ioc;
+	boost::asio::ssl::context ssl_context(boost::asio::ssl::context::tlsv12_client);
+	std::cout << "Calls to boost_asio_io and boost_asio_ssl ok" << std::endl;
+	ssl_context.set_default_verify_paths();
+
+	try {
+		//
+		// Create WebSocket Stream
+		//
+
+		tcp::resolver resolver{ioc};
+		auto const results = resolver.resolve("ws.tradier.com", "443");
+
+		//
+		// SSL Connection
+		//
+
+		using ssl_stream = boost::asio::ssl::stream<tcp::socket>;
+		websocket::stream<ssl_stream> ws(ioc, ssl_context);
+
+		//
+		// Establish TCP Connection
+		//
+
+		boost::asio::connect(ws.next_layer().next_layer(), results.begin(), results.end());
+
+		//
+		// SSL Handshake
+		//
+
+		ws.next_layer().handshake(boost::asio::ssl::stream_base::client);
+		ws.handshake("ws.tradier.com", "/v1/markets/events");
+
+		//
+		// Configure Payload Parameters
+		//
+
+		std::string payload = R"({"sessionid": ")" + sessionId + R"(",)"
+			R"("symbols": ["AAPL", "GOOG"],)"
+			R"("linebreak":true})";
+
+		//
+		// Send Payload
+		//
+
+		ws.write(boost::asio::buffer(payload));
+		std::cout << ">>> " << payload << std::endl;
+
+		//
+		// Read Response from Buffer
+		//
+
+		boost::beast::flat_buffer buffer;
+		while (true) {
+			ws.read(buffer);
+			auto msg = boost::beast::buffers_to_string(buffer.data());
+			std::cout << "<<< " << msg << std::endl;
+			buffer.consume(buffer.size());
+		}
+
+		//
+		// Close up Shop
+		//
+
+		ws.close(websocket::close_code::normal);
+
+
+	//
+	// Handle All Kind of Errors
+	//
+
+	} catch (const boost::system::system_error& e) {
+		std::cerr << "System error websocket: " << e.what() << std::endl;
+	} catch (const std::exception& e) {
+		std::cerr << "Exception: " << e.what() << std::endl;
+	} catch (...) {
+		std::cerr << "ugh!" << std::endl;
+	}
 }

@@ -6,13 +6,21 @@
 #include <map>
 #include <curl/curl.h>
 #include <nlohmann/json.hpp>
+#include <boost/beast/core.hpp>
+#include <boost/asio/connect.hpp>
+#include <boost/asio/ip/tcp.hpp>
+
+
+namespace websocket = boost::beast::websocket;
+using tcp = boost::asio::ip::tcp;
 
 class Tradier {
 public:
 	Tradier(const std::string& accountNumber, const std::string& authToken, bool liveTrade=false);
 	virtual ~Tradier();
 
-	// nlohmann::json startMarketSession() const;
+	nlohmann::json startMarketSession() const;
+	void startWebSocket(const std::string& sessionId) const;
 
 protected:
 	std::string ACCOUNT_NUMBER;
