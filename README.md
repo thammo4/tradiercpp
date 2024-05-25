@@ -20,6 +20,8 @@ TradierCPP is a C++ application designed to interface with the Tradier API, perf
 TradierCPP/
 │
 ├── include/          - Header files
+│   └── Account.h
+│   └── EnvReader.h
 │   └── Tradier.h
 │
 ├── src/              - Source files
@@ -27,6 +29,8 @@ TradierCPP/
 │   ├── Account.cpp
 │   ├── EnvReader.cpp
 │   ├── main.cpp
+│   ├── main_stream.cpp
+│   ├── main_dataprocess.cpp
 │   └── TradierHTTPConnect.cpp
 │
 ├── CMakeLists.txt    - CMake build configuration file
