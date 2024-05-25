@@ -174,7 +174,7 @@ void Tradier::startWebSocket(const std::string& sessionId) const {
 		// Read Response from Buffer
 		//
 
-		std::ofstream outputFile("market_data.txt", std::ios_base::app);
+		std::ofstream outputFile("../data/market_data.txt", std::ios_base::app);
 		boost::beast::flat_buffer buffer;
 
 		while (true) {

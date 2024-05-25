@@ -1,0 +1,1860 @@
+{
+    "close": "272.29",
+    "high": "274.96",
+    "low": "268.53",
+    "open": "270.93",
+    "prevClose": "278.57",
+    "symbol": "CRM",
+    "type": "summary"
+}
+{
+    "close": "430.16",
+    "high": "431.055",
+    "low": "424.41",
+    "open": "427.19",
+    "prevClose": "427.0",
+    "symbol": "MSFT",
+    "type": "summary"
+}
+{
+    "close": "174.52",
+    "high": "174.8595",
+    "low": "169.57",
+    "open": "173.2",
+    "prevClose": "172.21",
+    "symbol": "BA",
+    "type": "summary"
+}
+{
+    "close": "461.18",
+    "high": "465.25",
+    "low": "459.1",
+    "open": "459.84",
+    "prevClose": "458.15",
+    "symbol": "GS",
+    "type": "summary"
+}
+{
+    "close": "189.98",
+    "high": "190.58",
+    "low": "188.0404",
+    "open": "188.82",
+    "prevClose": "186.88",
+    "symbol": "AAPL",
+    "type": "summary"
+}
+{
+    "close": "180.75",
+    "high": "182.435",
+    "low": "180.3",
+    "open": "181.65",
+    "prevClose": "181.05",
+    "symbol": "AMZN",
+    "type": "summary"
+}
+{
+    "close": "101.76",
+    "high": "102.09",
+    "low": "100.69",
+    "open": "100.85",
+    "prevClose": "100.66",
+    "symbol": "DIS",
+    "type": "summary"
+}
+{
+    "close": "200.71",
+    "high": "200.76",
+    "low": "197.56",
+    "open": "197.75",
+    "prevClose": "196.92",
+    "symbol": "JPM",
+    "type": "summary"
+}
+{
+    "close": "274.49",
+    "high": "275.24",
+    "low": "273.35",
+    "open": "275.01",
+    "prevClose": "274.23",
+    "symbol": "V",
+    "type": "summary"
+}
+{
+    "close": "65.38",
+    "high": "65.69",
+    "low": "65.01",
+    "open": "65.13",
+    "prevClose": "64.84",
+    "symbol": "WMT",
+    "type": "summary"
+}
+{
+    "close": "170.89",
+    "high": "172.01",
+    "low": "170.21",
+    "open": "171.48",
+    "prevClose": "170.67",
+    "symbol": "IBM",
+    "type": "summary"
+}
+{
+    "cvol": "2528228",
+    "date": "1716591600002",
+    "exch": "N",
+    "last": "508.17",
+    "price": "508.17",
+    "size": "0",
+    "symbol": "UNH",
+    "type": "trade"
+}
+{
+    "cvol": "8325132",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "272.29",
+    "price": "272.29",
+    "size": "0",
+    "symbol": "CRM",
+    "type": "trade"
+}
+{
+    "cvol": "1624528",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "238.18",
+    "price": "238.18",
+    "size": "0",
+    "symbol": "AXP",
+    "type": "trade"
+}
+{
+    "cvol": "11855285",
+    "date": "1716580800165",
+    "exch": "Q",
+    "last": "430.16",
+    "price": "430.16",
+    "size": "1868083",
+    "symbol": "MSFT",
+    "type": "trade"
+}
+{
+    "cvol": "2360667",
+    "date": "1716580800142",
+    "exch": "Q",
+    "last": "199.69",
+    "price": "199.69",
+    "size": "546599",
+    "symbol": "HON",
+    "type": "trade"
+}
+{
+    "cvol": "8203136",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "62.0",
+    "price": "62.0",
+    "size": "0",
+    "symbol": "KO",
+    "type": "trade"
+}
+{
+    "cvol": "11941076",
+    "date": "1716580800364",
+    "exch": "Q",
+    "last": "46.42",
+    "price": "46.42",
+    "size": "2223712",
+    "symbol": "CSCO",
+    "type": "trade"
+}
+{
+    "cvol": "9489380",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "174.52",
+    "price": "174.52",
+    "size": "0",
+    "symbol": "BA",
+    "type": "trade"
+}
+{
+    "cvol": "2675900",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "57.76",
+    "price": "57.76",
+    "size": "0",
+    "symbol": "DOW",
+    "type": "trade"
+}
+{
+    "cvol": "2635223",
+    "date": "1716591600002",
+    "exch": "N",
+    "last": "348.9",
+    "price": "348.9",
+    "size": "0",
+    "symbol": "CAT",
+    "type": "trade"
+}
+{
+    "cvol": "1932470",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "461.18",
+    "price": "461.18",
+    "size": "0",
+    "symbol": "GS",
+    "type": "trade"
+}
+{
+    "cvol": "3820090",
+    "date": "1716591600000",
+    "exch": "N",
+    "last": "165.33",
+    "price": "165.33",
+    "size": "0",
+    "symbol": "PG",
+    "type": "trade"
+}
+{
+    "cvol": "2602227",
+    "date": "1716591600002",
+    "exch": "N",
+    "last": "99.67",
+    "price": "99.67",
+    "size": "0",
+    "symbol": "MMM",
+    "type": "trade"
+}
+{
+    "cvol": "36326975",
+    "date": "1716580800011",
+    "exch": "Q",
+    "last": "189.98",
+    "price": "189.98",
+    "size": "5022165",
+    "symbol": "AAPL",
+    "type": "trade"
+}
+{
+    "cvol": "2736871",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "325.1",
+    "price": "325.1",
+    "size": "0",
+    "symbol": "HD",
+    "type": "trade"
+}
+{
+    "cvol": "2425864",
+    "date": "1716580800243",
+    "exch": "Q",
+    "last": "305.84",
+    "price": "305.84",
+    "size": "1329351",
+    "symbol": "AMGN",
+    "type": "trade"
+}
+{
+    "cvol": "42434488",
+    "date": "1716580800203",
+    "exch": "Q",
+    "last": "30.72",
+    "price": "30.72",
+    "size": "10619462",
+    "symbol": "INTC",
+    "type": "trade"
+}
+{
+    "cvol": "4477720",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "157.75",
+    "price": "157.75",
+    "size": "0",
+    "symbol": "CVX",
+    "type": "trade"
+}
+{
+    "cvol": "27471640",
+    "date": "1716580800253",
+    "exch": "Q",
+    "last": "180.75",
+    "price": "180.75",
+    "size": "2632509",
+    "symbol": "AMZN",
+    "type": "trade"
+}
+{
+    "cvol": "649983",
+    "date": "1716591600000",
+    "exch": "N",
+    "last": "213.33",
+    "price": "213.33",
+    "size": "0",
+    "symbol": "TRV",
+    "type": "trade"
+}
+{
+    "cvol": "3382879",
+    "date": "1716591600002",
+    "exch": "N",
+    "last": "258.11",
+    "price": "258.11",
+    "size": "0",
+    "symbol": "MCD",
+    "type": "trade"
+}
+{
+    "cvol": "10419992",
+    "date": "1716591600000",
+    "exch": "N",
+    "last": "39.74",
+    "price": "39.74",
+    "size": "0",
+    "symbol": "VZ",
+    "type": "trade"
+}
+{
+    "cvol": "6451579",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "101.76",
+    "price": "101.76",
+    "size": "0",
+    "symbol": "DIS",
+    "type": "trade"
+}
+{
+    "cvol": "7356233",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "200.71",
+    "price": "200.71",
+    "size": "0",
+    "symbol": "JPM",
+    "type": "trade"
+}
+{
+    "cvol": "6937118",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "91.75",
+    "price": "91.75",
+    "size": "0",
+    "symbol": "NKE",
+    "type": "trade"
+}
+{
+    "cvol": "4339967",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "274.49",
+    "price": "274.49",
+    "size": "0",
+    "symbol": "V",
+    "type": "trade"
+}
+{
+    "cvol": "11795024",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "65.38",
+    "price": "65.38",
+    "size": "0",
+    "symbol": "WMT",
+    "type": "trade"
+}
+{
+    "cvol": "5983846",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "129.49",
+    "price": "129.49",
+    "size": "0",
+    "symbol": "MRK",
+    "type": "trade"
+}
+{
+    "cvol": "2587829",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "170.89",
+    "price": "170.89",
+    "size": "0",
+    "symbol": "IBM",
+    "type": "trade"
+}
+{
+    "cvol": "9520576",
+    "date": "1716591600002",
+    "exch": "N",
+    "last": "146.97",
+    "price": "146.97",
+    "size": "0",
+    "symbol": "JNJ",
+    "type": "trade"
+}
+{
+    "ask": 273.5,
+    "askdate": "1716594696000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 273.0,
+    "biddate": "1716595200000",
+    "bidexch": "P",
+    "bidsz": 37,
+    "symbol": "CRM",
+    "type": "quote"
+}
+{
+    "ask": 430.4,
+    "askdate": "1716595160000",
+    "askexch": "P",
+    "asksz": 7,
+    "bid": 430.25,
+    "biddate": "1716595185000",
+    "bidexch": "P",
+    "bidsz": 9,
+    "symbol": "MSFT",
+    "type": "quote"
+}
+{
+    "ask": 62.08,
+    "askdate": "1716591897000",
+    "askexch": "P",
+    "asksz": 5,
+    "bid": 61.95,
+    "biddate": "1716595200000",
+    "bidexch": "P",
+    "bidsz": 2,
+    "symbol": "KO",
+    "type": "quote"
+}
+{
+    "ask": 46.39,
+    "askdate": "1716595194000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 46.38,
+    "biddate": "1716595012000",
+    "bidexch": "P",
+    "bidsz": 25,
+    "symbol": "CSCO",
+    "type": "quote"
+}
+{
+    "ask": 174.5,
+    "askdate": "1716595200000",
+    "askexch": "P",
+    "asksz": 2,
+    "bid": 174.22,
+    "biddate": "1716595200000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "BA",
+    "type": "quote"
+}
+{
+    "ask": 461.49,
+    "askdate": "1716588401000",
+    "askexch": "P",
+    "asksz": 2,
+    "bid": 461.01,
+    "biddate": "1716594503000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "GS",
+    "type": "quote"
+}
+{
+    "ask": 165.33,
+    "askdate": "1716590347000",
+    "askexch": "P",
+    "asksz": 20,
+    "bid": 165.2,
+    "biddate": "1716593257000",
+    "bidexch": "P",
+    "bidsz": 2,
+    "symbol": "PG",
+    "type": "quote"
+}
+{
+    "ask": 99.95,
+    "askdate": "1716585956000",
+    "askexch": "P",
+    "asksz": 5,
+    "bid": 99.4,
+    "biddate": "1716585753000",
+    "bidexch": "P",
+    "bidsz": 5,
+    "symbol": "MMM",
+    "type": "quote"
+}
+{
+    "ask": 190.09,
+    "askdate": "1716595184000",
+    "askexch": "P",
+    "asksz": 10,
+    "bid": 189.95,
+    "biddate": "1716595191000",
+    "bidexch": "K",
+    "bidsz": 1,
+    "symbol": "AAPL",
+    "type": "quote"
+}
+{
+    "ask": 181.06,
+    "askdate": "1716595199000",
+    "askexch": "P",
+    "asksz": 14,
+    "bid": 181.04,
+    "biddate": "1716595195000",
+    "bidexch": "K",
+    "bidsz": 1,
+    "symbol": "AMZN",
+    "type": "quote"
+}
+{
+    "ask": 101.7,
+    "askdate": "1716595000000",
+    "askexch": "P",
+    "asksz": 7,
+    "bid": 101.6,
+    "biddate": "1716595124000",
+    "bidexch": "P",
+    "bidsz": 4,
+    "symbol": "DIS",
+    "type": "quote"
+}
+{
+    "ask": 202.3,
+    "askdate": "1716595200000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 200.65,
+    "biddate": "1716594538000",
+    "bidexch": "P",
+    "bidsz": 8,
+    "symbol": "JPM",
+    "type": "quote"
+}
+{
+    "ask": 274.85,
+    "askdate": "1716593461000",
+    "askexch": "P",
+    "asksz": 5,
+    "bid": 274.28,
+    "biddate": "1716593547000",
+    "bidexch": "P",
+    "bidsz": 5,
+    "symbol": "V",
+    "type": "quote"
+}
+{
+    "ask": 65.38,
+    "askdate": "1716594411000",
+    "askexch": "P",
+    "asksz": 10,
+    "bid": 65.33,
+    "biddate": "1716594390000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "WMT",
+    "type": "quote"
+}
+{
+    "ask": 129.8,
+    "askdate": "1716595200000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 129.44,
+    "biddate": "1716594674000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "MRK",
+    "type": "quote"
+}
+{
+    "ask": 171.05,
+    "askdate": "1716594330000",
+    "askexch": "P",
+    "asksz": 3,
+    "bid": 170.85,
+    "biddate": "1716595106000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "IBM",
+    "type": "quote"
+}
+{
+    "close": "46.42",
+    "high": "46.795",
+    "low": "46.38",
+    "open": "46.63",
+    "prevClose": "46.6",
+    "symbol": "CSCO",
+    "type": "summary"
+}
+{
+    "close": "57.76",
+    "high": "57.82",
+    "low": "57.28",
+    "open": "57.29",
+    "prevClose": "56.92",
+    "symbol": "DOW",
+    "type": "summary"
+}
+{
+    "close": "258.11",
+    "high": "260.46",
+    "low": "257.52",
+    "open": "258.74",
+    "prevClose": "257.93",
+    "symbol": "MCD",
+    "type": "summary"
+}
+{
+    "close": "39.74",
+    "high": "39.74",
+    "low": "39.5",
+    "open": "39.51",
+    "prevClose": "39.43",
+    "symbol": "VZ",
+    "type": "summary"
+}
+{
+    "close": "146.97",
+    "high": "149.8139",
+    "low": "146.76",
+    "open": "149.53",
+    "prevClose": "149.7",
+    "symbol": "JNJ",
+    "type": "summary"
+}
+{
+    "ask": 58.33,
+    "askdate": "1716595200000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 57.0,
+    "biddate": "1716595200000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "DOW",
+    "type": "quote"
+}
+{
+    "ask": 258.4,
+    "askdate": "1716594639000",
+    "askexch": "P",
+    "asksz": 4,
+    "bid": 257.7,
+    "biddate": "1716594490000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "MCD",
+    "type": "quote"
+}
+{
+    "ask": 39.72,
+    "askdate": "1716593439000",
+    "askexch": "P",
+    "asksz": 5,
+    "bid": 39.68,
+    "biddate": "1716594620000",
+    "bidexch": "P",
+    "bidsz": 24,
+    "symbol": "VZ",
+    "type": "quote"
+}
+{
+    "ask": 147.0,
+    "askdate": "1716595189000",
+    "askexch": "P",
+    "asksz": 3,
+    "bid": 146.91,
+    "biddate": "1716595200000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "JNJ",
+    "type": "quote"
+}
+{
+    "close": "508.17",
+    "high": "517.14",
+    "low": "507.52",
+    "open": "516.11",
+    "prevClose": "516.83",
+    "symbol": "UNH",
+    "type": "summary"
+}
+{
+    "close": "238.18",
+    "high": "240.07",
+    "low": "236.69",
+    "open": "236.86",
+    "prevClose": "235.46",
+    "symbol": "AXP",
+    "type": "summary"
+}
+{
+    "close": "199.69",
+    "high": "200.81",
+    "low": "199.19",
+    "open": "200.35",
+    "prevClose": "199.39",
+    "symbol": "HON",
+    "type": "summary"
+}
+{
+    "ask": 508.5,
+    "askdate": "1716595043000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 508.0,
+    "biddate": "1716595043000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "UNH",
+    "type": "quote"
+}
+{
+    "ask": 238.5,
+    "askdate": "1716590442000",
+    "askexch": "P",
+    "asksz": 5,
+    "bid": 238.11,
+    "biddate": "1716592930000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "AXP",
+    "type": "quote"
+}
+{
+    "ask": 200.09,
+    "askdate": "1716595199000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 199.22,
+    "biddate": "1716594728000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "HON",
+    "type": "quote"
+}
+{
+    "close": "165.33",
+    "high": "166.31",
+    "low": "165.15",
+    "open": "165.85",
+    "prevClose": "165.49",
+    "symbol": "PG",
+    "type": "summary"
+}
+{
+    "close": "325.1",
+    "high": "327.54",
+    "low": "324.42",
+    "open": "326.39",
+    "prevClose": "326.89",
+    "symbol": "HD",
+    "type": "summary"
+}
+{
+    "close": "305.84",
+    "high": "307.5",
+    "low": "303.9",
+    "open": "306.42",
+    "prevClose": "306.5",
+    "symbol": "AMGN",
+    "type": "summary"
+}
+{
+    "close": "30.72",
+    "high": "31.02",
+    "low": "30.1301",
+    "open": "30.29",
+    "prevClose": "30.08",
+    "symbol": "INTC",
+    "type": "summary"
+}
+{
+    "close": "157.75",
+    "high": "158.97",
+    "low": "157.3",
+    "open": "158.08",
+    "prevClose": "156.94",
+    "symbol": "CVX",
+    "type": "summary"
+}
+{
+    "close": "213.33",
+    "high": "214.41",
+    "low": "212.9",
+    "open": "213.0",
+    "prevClose": "212.24",
+    "symbol": "TRV",
+    "type": "summary"
+}
+{
+    "close": "91.75",
+    "high": "92.2001",
+    "low": "91.49",
+    "open": "91.77",
+    "prevClose": "91.4",
+    "symbol": "NKE",
+    "type": "summary"
+}
+{
+    "close": "129.49",
+    "high": "131.45",
+    "low": "129.16",
+    "open": "131.45",
+    "prevClose": "131.09",
+    "symbol": "MRK",
+    "type": "summary"
+}
+{
+    "ask": 325.39,
+    "askdate": "1716595148000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 325.15,
+    "biddate": "1716594504000",
+    "bidexch": "P",
+    "bidsz": 2,
+    "symbol": "HD",
+    "type": "quote"
+}
+{
+    "ask": 308.0,
+    "askdate": "1716591600000",
+    "askexch": "Q",
+    "asksz": 2,
+    "bid": 305.02,
+    "biddate": "1716587716000",
+    "bidexch": "Q",
+    "bidsz": 1,
+    "symbol": "AMGN",
+    "type": "quote"
+}
+{
+    "ask": 30.7,
+    "askdate": "1716595152000",
+    "askexch": "Q",
+    "asksz": 16,
+    "bid": 30.68,
+    "biddate": "1716595197000",
+    "bidexch": "P",
+    "bidsz": 42,
+    "symbol": "INTC",
+    "type": "quote"
+}
+{
+    "ask": 157.8,
+    "askdate": "1716595019000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 157.75,
+    "biddate": "1716594976000",
+    "bidexch": "P",
+    "bidsz": 4,
+    "symbol": "CVX",
+    "type": "quote"
+}
+{
+    "ask": 214.0,
+    "askdate": "1716585859000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 212.73,
+    "biddate": "1716585859000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "TRV",
+    "type": "quote"
+}
+{
+    "ask": 91.9,
+    "askdate": "1716595199000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 91.6,
+    "biddate": "1716586140000",
+    "bidexch": "P",
+    "bidsz": 5,
+    "symbol": "NKE",
+    "type": "quote"
+}
+{
+    "close": "62.0",
+    "high": "62.42",
+    "low": "61.97",
+    "open": "62.22",
+    "prevClose": "62.09",
+    "symbol": "KO",
+    "type": "summary"
+}
+{
+    "close": "348.9",
+    "high": "353.91",
+    "low": "346.68",
+    "open": "352.64",
+    "prevClose": "350.7",
+    "symbol": "CAT",
+    "type": "summary"
+}
+{
+    "close": "99.67",
+    "high": "100.52",
+    "low": "99.3388",
+    "open": "99.81",
+    "prevClose": "99.51",
+    "symbol": "MMM",
+    "type": "summary"
+}
+{
+    "ask": 348.88,
+    "askdate": "1716594790000",
+    "askexch": "P",
+    "asksz": 6,
+    "bid": 346.52,
+    "biddate": "1716595200000",
+    "bidexch": "P",
+    "bidsz": 12,
+    "symbol": "CAT",
+    "type": "quote"
+}
+{
+    "ask": 273.5,
+    "askdate": "1716594696000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 273.0,
+    "biddate": "1716595200000",
+    "bidexch": "P",
+    "bidsz": 37,
+    "symbol": "CRM",
+    "type": "quote"
+}
+{
+    "ask": 238.5,
+    "askdate": "1716590442000",
+    "askexch": "P",
+    "asksz": 5,
+    "bid": 238.11,
+    "biddate": "1716592930000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "AXP",
+    "type": "quote"
+}
+{
+    "ask": 430.4,
+    "askdate": "1716595160000",
+    "askexch": "P",
+    "asksz": 7,
+    "bid": 430.25,
+    "biddate": "1716595185000",
+    "bidexch": "P",
+    "bidsz": 9,
+    "symbol": "MSFT",
+    "type": "quote"
+}
+{
+    "ask": 200.09,
+    "askdate": "1716595199000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 199.22,
+    "biddate": "1716594728000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "HON",
+    "type": "quote"
+}
+{
+    "ask": 62.08,
+    "askdate": "1716591897000",
+    "askexch": "P",
+    "asksz": 5,
+    "bid": 61.95,
+    "biddate": "1716595200000",
+    "bidexch": "P",
+    "bidsz": 2,
+    "symbol": "KO",
+    "type": "quote"
+}
+{
+    "ask": 46.39,
+    "askdate": "1716595194000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 46.38,
+    "biddate": "1716595012000",
+    "bidexch": "P",
+    "bidsz": 25,
+    "symbol": "CSCO",
+    "type": "quote"
+}
+{
+    "ask": 174.5,
+    "askdate": "1716595200000",
+    "askexch": "P",
+    "asksz": 2,
+    "bid": 174.22,
+    "biddate": "1716595200000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "BA",
+    "type": "quote"
+}
+{
+    "ask": 348.88,
+    "askdate": "1716594790000",
+    "askexch": "P",
+    "asksz": 6,
+    "bid": 346.52,
+    "biddate": "1716595200000",
+    "bidexch": "P",
+    "bidsz": 12,
+    "symbol": "CAT",
+    "type": "quote"
+}
+{
+    "ask": 461.49,
+    "askdate": "1716588401000",
+    "askexch": "P",
+    "asksz": 2,
+    "bid": 461.01,
+    "biddate": "1716594503000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "GS",
+    "type": "quote"
+}
+{
+    "ask": 165.33,
+    "askdate": "1716590347000",
+    "askexch": "P",
+    "asksz": 20,
+    "bid": 165.2,
+    "biddate": "1716593257000",
+    "bidexch": "P",
+    "bidsz": 2,
+    "symbol": "PG",
+    "type": "quote"
+}
+{
+    "ask": 99.95,
+    "askdate": "1716585956000",
+    "askexch": "P",
+    "asksz": 5,
+    "bid": 99.4,
+    "biddate": "1716585753000",
+    "bidexch": "P",
+    "bidsz": 5,
+    "symbol": "MMM",
+    "type": "quote"
+}
+{
+    "ask": 190.09,
+    "askdate": "1716595184000",
+    "askexch": "P",
+    "asksz": 10,
+    "bid": 189.95,
+    "biddate": "1716595191000",
+    "bidexch": "K",
+    "bidsz": 1,
+    "symbol": "AAPL",
+    "type": "quote"
+}
+{
+    "ask": 325.39,
+    "askdate": "1716595148000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 325.15,
+    "biddate": "1716594504000",
+    "bidexch": "P",
+    "bidsz": 2,
+    "symbol": "HD",
+    "type": "quote"
+}
+{
+    "ask": 30.7,
+    "askdate": "1716595152000",
+    "askexch": "Q",
+    "asksz": 16,
+    "bid": 30.68,
+    "biddate": "1716595197000",
+    "bidexch": "P",
+    "bidsz": 42,
+    "symbol": "INTC",
+    "type": "quote"
+}
+{
+    "ask": 157.8,
+    "askdate": "1716595019000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 157.75,
+    "biddate": "1716594976000",
+    "bidexch": "P",
+    "bidsz": 4,
+    "symbol": "CVX",
+    "type": "quote"
+}
+{
+    "ask": 181.06,
+    "askdate": "1716595199000",
+    "askexch": "P",
+    "asksz": 14,
+    "bid": 181.04,
+    "biddate": "1716595195000",
+    "bidexch": "K",
+    "bidsz": 1,
+    "symbol": "AMZN",
+    "type": "quote"
+}
+{
+    "ask": 258.4,
+    "askdate": "1716594639000",
+    "askexch": "P",
+    "asksz": 4,
+    "bid": 257.7,
+    "biddate": "1716594490000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "MCD",
+    "type": "quote"
+}
+{
+    "ask": 39.72,
+    "askdate": "1716593439000",
+    "askexch": "P",
+    "asksz": 5,
+    "bid": 39.68,
+    "biddate": "1716594620000",
+    "bidexch": "P",
+    "bidsz": 24,
+    "symbol": "VZ",
+    "type": "quote"
+}
+{
+    "ask": 101.7,
+    "askdate": "1716595000000",
+    "askexch": "P",
+    "asksz": 7,
+    "bid": 101.6,
+    "biddate": "1716595124000",
+    "bidexch": "P",
+    "bidsz": 4,
+    "symbol": "DIS",
+    "type": "quote"
+}
+{
+    "ask": 202.3,
+    "askdate": "1716595200000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 200.65,
+    "biddate": "1716594538000",
+    "bidexch": "P",
+    "bidsz": 8,
+    "symbol": "JPM",
+    "type": "quote"
+}
+{
+    "ask": 91.9,
+    "askdate": "1716595199000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 91.6,
+    "biddate": "1716586140000",
+    "bidexch": "P",
+    "bidsz": 5,
+    "symbol": "NKE",
+    "type": "quote"
+}
+{
+    "ask": 274.85,
+    "askdate": "1716593461000",
+    "askexch": "P",
+    "asksz": 5,
+    "bid": 274.28,
+    "biddate": "1716593547000",
+    "bidexch": "P",
+    "bidsz": 5,
+    "symbol": "V",
+    "type": "quote"
+}
+{
+    "ask": 65.38,
+    "askdate": "1716594411000",
+    "askexch": "P",
+    "asksz": 10,
+    "bid": 65.33,
+    "biddate": "1716594390000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "WMT",
+    "type": "quote"
+}
+{
+    "ask": 129.8,
+    "askdate": "1716595200000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 129.44,
+    "biddate": "1716594674000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "MRK",
+    "type": "quote"
+}
+{
+    "ask": 171.05,
+    "askdate": "1716594330000",
+    "askexch": "P",
+    "asksz": 3,
+    "bid": 170.85,
+    "biddate": "1716595106000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "IBM",
+    "type": "quote"
+}
+{
+    "ask": 147.0,
+    "askdate": "1716595189000",
+    "askexch": "P",
+    "asksz": 3,
+    "bid": 146.91,
+    "biddate": "1716595200000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "JNJ",
+    "type": "quote"
+}
+{
+    "cvol": "8325132",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "272.29",
+    "price": "272.29",
+    "size": "0",
+    "symbol": "CRM",
+    "type": "trade"
+}
+{
+    "cvol": "1624528",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "238.18",
+    "price": "238.18",
+    "size": "0",
+    "symbol": "AXP",
+    "type": "trade"
+}
+{
+    "cvol": "11855285",
+    "date": "1716580800165",
+    "exch": "Q",
+    "last": "430.16",
+    "price": "430.16",
+    "size": "1868083",
+    "symbol": "MSFT",
+    "type": "trade"
+}
+{
+    "cvol": "2360667",
+    "date": "1716580800142",
+    "exch": "Q",
+    "last": "199.69",
+    "price": "199.69",
+    "size": "546599",
+    "symbol": "HON",
+    "type": "trade"
+}
+{
+    "cvol": "8203136",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "62.0",
+    "price": "62.0",
+    "size": "0",
+    "symbol": "KO",
+    "type": "trade"
+}
+{
+    "cvol": "11941076",
+    "date": "1716580800364",
+    "exch": "Q",
+    "last": "46.42",
+    "price": "46.42",
+    "size": "2223712",
+    "symbol": "CSCO",
+    "type": "trade"
+}
+{
+    "cvol": "9489380",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "174.52",
+    "price": "174.52",
+    "size": "0",
+    "symbol": "BA",
+    "type": "trade"
+}
+{
+    "cvol": "2635223",
+    "date": "1716591600002",
+    "exch": "N",
+    "last": "348.9",
+    "price": "348.9",
+    "size": "0",
+    "symbol": "CAT",
+    "type": "trade"
+}
+{
+    "cvol": "1932470",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "461.18",
+    "price": "461.18",
+    "size": "0",
+    "symbol": "GS",
+    "type": "trade"
+}
+{
+    "cvol": "3820090",
+    "date": "1716591600000",
+    "exch": "N",
+    "last": "165.33",
+    "price": "165.33",
+    "size": "0",
+    "symbol": "PG",
+    "type": "trade"
+}
+{
+    "cvol": "2602227",
+    "date": "1716591600002",
+    "exch": "N",
+    "last": "99.67",
+    "price": "99.67",
+    "size": "0",
+    "symbol": "MMM",
+    "type": "trade"
+}
+{
+    "cvol": "36326975",
+    "date": "1716580800011",
+    "exch": "Q",
+    "last": "189.98",
+    "price": "189.98",
+    "size": "5022165",
+    "symbol": "AAPL",
+    "type": "trade"
+}
+{
+    "cvol": "2736871",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "325.1",
+    "price": "325.1",
+    "size": "0",
+    "symbol": "HD",
+    "type": "trade"
+}
+{
+    "cvol": "42434488",
+    "date": "1716580800203",
+    "exch": "Q",
+    "last": "30.72",
+    "price": "30.72",
+    "size": "10619462",
+    "symbol": "INTC",
+    "type": "trade"
+}
+{
+    "cvol": "4477720",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "157.75",
+    "price": "157.75",
+    "size": "0",
+    "symbol": "CVX",
+    "type": "trade"
+}
+{
+    "cvol": "27471640",
+    "date": "1716580800253",
+    "exch": "Q",
+    "last": "180.75",
+    "price": "180.75",
+    "size": "2632509",
+    "symbol": "AMZN",
+    "type": "trade"
+}
+{
+    "cvol": "3382879",
+    "date": "1716591600002",
+    "exch": "N",
+    "last": "258.11",
+    "price": "258.11",
+    "size": "0",
+    "symbol": "MCD",
+    "type": "trade"
+}
+{
+    "cvol": "10419992",
+    "date": "1716591600000",
+    "exch": "N",
+    "last": "39.74",
+    "price": "39.74",
+    "size": "0",
+    "symbol": "VZ",
+    "type": "trade"
+}
+{
+    "cvol": "6451579",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "101.76",
+    "price": "101.76",
+    "size": "0",
+    "symbol": "DIS",
+    "type": "trade"
+}
+{
+    "cvol": "7356233",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "200.71",
+    "price": "200.71",
+    "size": "0",
+    "symbol": "JPM",
+    "type": "trade"
+}
+{
+    "cvol": "6937118",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "91.75",
+    "price": "91.75",
+    "size": "0",
+    "symbol": "NKE",
+    "type": "trade"
+}
+{
+    "cvol": "4339967",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "274.49",
+    "price": "274.49",
+    "size": "0",
+    "symbol": "V",
+    "type": "trade"
+}
+{
+    "cvol": "11795024",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "65.38",
+    "price": "65.38",
+    "size": "0",
+    "symbol": "WMT",
+    "type": "trade"
+}
+{
+    "cvol": "5983846",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "129.49",
+    "price": "129.49",
+    "size": "0",
+    "symbol": "MRK",
+    "type": "trade"
+}
+{
+    "cvol": "2587829",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "170.89",
+    "price": "170.89",
+    "size": "0",
+    "symbol": "IBM",
+    "type": "trade"
+}
+{
+    "cvol": "9520576",
+    "date": "1716591600002",
+    "exch": "N",
+    "last": "146.97",
+    "price": "146.97",
+    "size": "0",
+    "symbol": "JNJ",
+    "type": "trade"
+}
+{
+    "close": "272.29",
+    "high": "274.96",
+    "low": "268.53",
+    "open": "270.93",
+    "prevClose": "278.57",
+    "symbol": "CRM",
+    "type": "summary"
+}
+{
+    "close": "238.18",
+    "high": "240.07",
+    "low": "236.69",
+    "open": "236.86",
+    "prevClose": "235.46",
+    "symbol": "AXP",
+    "type": "summary"
+}
+{
+    "close": "430.16",
+    "high": "431.055",
+    "low": "424.41",
+    "open": "427.19",
+    "prevClose": "427.0",
+    "symbol": "MSFT",
+    "type": "summary"
+}
+{
+    "close": "199.69",
+    "high": "200.81",
+    "low": "199.19",
+    "open": "200.35",
+    "prevClose": "199.39",
+    "symbol": "HON",
+    "type": "summary"
+}
+{
+    "close": "62.0",
+    "high": "62.42",
+    "low": "61.97",
+    "open": "62.22",
+    "prevClose": "62.09",
+    "symbol": "KO",
+    "type": "summary"
+}
+{
+    "close": "46.42",
+    "high": "46.795",
+    "low": "46.38",
+    "open": "46.63",
+    "prevClose": "46.6",
+    "symbol": "CSCO",
+    "type": "summary"
+}
+{
+    "close": "174.52",
+    "high": "174.8595",
+    "low": "169.57",
+    "open": "173.2",
+    "prevClose": "172.21",
+    "symbol": "BA",
+    "type": "summary"
+}
+{
+    "close": "348.9",
+    "high": "353.91",
+    "low": "346.68",
+    "open": "352.64",
+    "prevClose": "350.7",
+    "symbol": "CAT",
+    "type": "summary"
+}
+{
+    "close": "461.18",
+    "high": "465.25",
+    "low": "459.1",
+    "open": "459.84",
+    "prevClose": "458.15",
+    "symbol": "GS",
+    "type": "summary"
+}
+{
+    "close": "165.33",
+    "high": "166.31",
+    "low": "165.15",
+    "open": "165.85",
+    "prevClose": "165.49",
+    "symbol": "PG",
+    "type": "summary"
+}
+{
+    "close": "99.67",
+    "high": "100.52",
+    "low": "99.3388",
+    "open": "99.81",
+    "prevClose": "99.51",
+    "symbol": "MMM",
+    "type": "summary"
+}
+{
+    "close": "189.98",
+    "high": "190.58",
+    "low": "188.0404",
+    "open": "188.82",
+    "prevClose": "186.88",
+    "symbol": "AAPL",
+    "type": "summary"
+}
+{
+    "close": "325.1",
+    "high": "327.54",
+    "low": "324.42",
+    "open": "326.39",
+    "prevClose": "326.89",
+    "symbol": "HD",
+    "type": "summary"
+}
+{
+    "close": "30.72",
+    "high": "31.02",
+    "low": "30.1301",
+    "open": "30.29",
+    "prevClose": "30.08",
+    "symbol": "INTC",
+    "type": "summary"
+}
+{
+    "close": "157.75",
+    "high": "158.97",
+    "low": "157.3",
+    "open": "158.08",
+    "prevClose": "156.94",
+    "symbol": "CVX",
+    "type": "summary"
+}
+{
+    "close": "180.75",
+    "high": "182.435",
+    "low": "180.3",
+    "open": "181.65",
+    "prevClose": "181.05",
+    "symbol": "AMZN",
+    "type": "summary"
+}
+{
+    "close": "258.11",
+    "high": "260.46",
+    "low": "257.52",
+    "open": "258.74",
+    "prevClose": "257.93",
+    "symbol": "MCD",
+    "type": "summary"
+}
+{
+    "close": "39.74",
+    "high": "39.74",
+    "low": "39.5",
+    "open": "39.51",
+    "prevClose": "39.43",
+    "symbol": "VZ",
+    "type": "summary"
+}
+{
+    "close": "101.76",
+    "high": "102.09",
+    "low": "100.69",
+    "open": "100.85",
+    "prevClose": "100.66",
+    "symbol": "DIS",
+    "type": "summary"
+}
+{
+    "close": "200.71",
+    "high": "200.76",
+    "low": "197.56",
+    "open": "197.75",
+    "prevClose": "196.92",
+    "symbol": "JPM",
+    "type": "summary"
+}
+{
+    "close": "91.75",
+    "high": "92.2001",
+    "low": "91.49",
+    "open": "91.77",
+    "prevClose": "91.4",
+    "symbol": "NKE",
+    "type": "summary"
+}
+{
+    "close": "274.49",
+    "high": "275.24",
+    "low": "273.35",
+    "open": "275.01",
+    "prevClose": "274.23",
+    "symbol": "V",
+    "type": "summary"
+}
+{
+    "close": "65.38",
+    "high": "65.69",
+    "low": "65.01",
+    "open": "65.13",
+    "prevClose": "64.84",
+    "symbol": "WMT",
+    "type": "summary"
+}
+{
+    "close": "129.49",
+    "high": "131.45",
+    "low": "129.16",
+    "open": "131.45",
+    "prevClose": "131.09",
+    "symbol": "MRK",
+    "type": "summary"
+}
+{
+    "close": "170.89",
+    "high": "172.01",
+    "low": "170.21",
+    "open": "171.48",
+    "prevClose": "170.67",
+    "symbol": "IBM",
+    "type": "summary"
+}
+{
+    "close": "146.97",
+    "high": "149.8139",
+    "low": "146.76",
+    "open": "149.53",
+    "prevClose": "149.7",
+    "symbol": "JNJ",
+    "type": "summary"
+}
+{
+    "ask": 508.5,
+    "askdate": "1716595043000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 508.0,
+    "biddate": "1716595043000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "UNH",
+    "type": "quote"
+}
+{
+    "cvol": "2528228",
+    "date": "1716591600002",
+    "exch": "N",
+    "last": "508.17",
+    "price": "508.17",
+    "size": "0",
+    "symbol": "UNH",
+    "type": "trade"
+}
+{
+    "close": "508.17",
+    "high": "517.14",
+    "low": "507.52",
+    "open": "516.11",
+    "prevClose": "516.83",
+    "symbol": "UNH",
+    "type": "summary"
+}
+{
+    "ask": 308.0,
+    "askdate": "1716591600000",
+    "askexch": "Q",
+    "asksz": 2,
+    "bid": 305.02,
+    "biddate": "1716587716000",
+    "bidexch": "Q",
+    "bidsz": 1,
+    "symbol": "AMGN",
+    "type": "quote"
+}
+{
+    "ask": 214.0,
+    "askdate": "1716585859000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 212.73,
+    "biddate": "1716585859000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "TRV",
+    "type": "quote"
+}
+{
+    "cvol": "2425864",
+    "date": "1716580800243",
+    "exch": "Q",
+    "last": "305.84",
+    "price": "305.84",
+    "size": "1329351",
+    "symbol": "AMGN",
+    "type": "trade"
+}
+{
+    "cvol": "649983",
+    "date": "1716591600000",
+    "exch": "N",
+    "last": "213.33",
+    "price": "213.33",
+    "size": "0",
+    "symbol": "TRV",
+    "type": "trade"
+}
+{
+    "close": "305.84",
+    "high": "307.5",
+    "low": "303.9",
+    "open": "306.42",
+    "prevClose": "306.5",
+    "symbol": "AMGN",
+    "type": "summary"
+}
+{
+    "close": "213.33",
+    "high": "214.41",
+    "low": "212.9",
+    "open": "213.0",
+    "prevClose": "212.24",
+    "symbol": "TRV",
+    "type": "summary"
+}
+{
+    "ask": 58.33,
+    "askdate": "1716595200000",
+    "askexch": "P",
+    "asksz": 1,
+    "bid": 57.0,
+    "biddate": "1716595200000",
+    "bidexch": "P",
+    "bidsz": 1,
+    "symbol": "DOW",
+    "type": "quote"
+}
+{
+    "cvol": "2675900",
+    "date": "1716591600001",
+    "exch": "N",
+    "last": "57.76",
+    "price": "57.76",
+    "size": "0",
+    "symbol": "DOW",
+    "type": "trade"
+}
+{
+    "close": "57.76",
+    "high": "57.82",
+    "low": "57.28",
+    "open": "57.29",
+    "prevClose": "56.92",
+    "symbol": "DOW",
+    "type": "summary"
+}
