@@ -32,6 +32,10 @@ TradierCPP/
 │   ├── main_stream.cpp
 │   ├── main_dataprocess.cpp
 │   └── TradierHTTPConnect.cpp
+|
+├── data/              - Streamed data and processed JSON
+│   ├── market_data.txt
+│   ├── processed_json{DATE}.txt
 │
 ├── CMakeLists.txt    - CMake build configuration file
 └── .env              - Environment variables for API keys and account details
