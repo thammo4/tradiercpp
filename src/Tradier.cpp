@@ -1,6 +1,7 @@
 // FILE: `src/Tradier.cpp`
 #include "Tradier.h"
 #include <iostream>
+#include <fstream>
 #include <boost/asio/ssl.hpp>
 #include <boost/beast.hpp>
 #include <boost/beast/ssl.hpp>
@@ -159,8 +160,8 @@ void Tradier::startWebSocket(const std::string& sessionId) const {
 		//
 
 		std::string payload = R"({"sessionid": ")" + sessionId + R"(",)"
-			R"("symbols": ["AAPL", "GOOG"],)"
-			R"("linebreak":true})";
+			R"("symbols": ["AMZN", "AXP", "AMGN", "AAPL", "BA", "CAT", "CSCO", "CVX", "GS", "HD", "HON", "IBM", "INTC", "JNJ", "KO", "JPM", "MCD", "MMM", "MRK", "MSFT", "NKE", "PG", "TRV", "UNH", "CRM", "VZ", "V", "WMT", "DIS", "DOW"],)"
+			R"("linebreak":false})";
 
 		//
 		// Send Payload
@@ -173,11 +174,14 @@ void Tradier::startWebSocket(const std::string& sessionId) const {
 		// Read Response from Buffer
 		//
 
+		std::ofstream outputFile("market_data.txt", std::ios_base::app);
 		boost::beast::flat_buffer buffer;
+
 		while (true) {
 			ws.read(buffer);
 			auto msg = boost::beast::buffers_to_string(buffer.data());
-			std::cout << "<<< " << msg << std::endl;
+			// std::cout << "<<< " << msg << std::endl;
+			outputFile << msg << std::endl;
 			buffer.consume(buffer.size());
 		}
 
