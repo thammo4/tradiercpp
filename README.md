@@ -62,8 +62,19 @@ TradierCPP/
 
 ## Usage
 
-After building the project, run the executable:
+After building the project, run the executables:
 
+• WebSocket Streaming
+```bash
+./TradierStream
+```
+
+• Convert streamed data into JSON for downstream processing
+```bash
+./TradierDataProcess
+```
+
+• General account information
 ```bash
 ./TradierCPP
 ```
