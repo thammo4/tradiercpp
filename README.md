@@ -6,6 +6,8 @@ TradierCPP is a C++ application designed to interface with the Tradier API, perf
 
 - **Market Data Streaming:** Utilizes Tradier's WebSocket API to stream real-time market data.
 - **Data Processing:** Processes streamed data to perform financial analysis or other operations.
+- **Equity Order Execution:** Submit equity orders.
+- **Options Order Execution:** Submit options orders.
 - **Modular Architecture:** Divided into separate modules for streaming and processing to enhance maintainability and scalability.
 
 ## Dependencies
