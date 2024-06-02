@@ -3,6 +3,8 @@
 .DS_Store
 gitCommits/*
 
+data/*
+
 # Build output
 /build/
 

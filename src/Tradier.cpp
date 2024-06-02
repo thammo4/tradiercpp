@@ -63,10 +63,7 @@ nlohmann::json Tradier::sendRequest(const std::string& endpoint, const std::stri
 	std::string readBuffer;
 	nlohmann::json jsonResult;
 	struct curl_slist* headers = nullptr;
-
-	//
-	// Convert the map to curl_slist or else compiler will freak out
-	//
+	struct curl_slist* tmp = nullptr;
 
 	if (curl) {
 		for (const auto& header : API_HEADERS) {
@@ -76,6 +73,29 @@ nlohmann::json Tradier::sendRequest(const std::string& endpoint, const std::stri
 
 		std::string fullURL = BASE_URL + endpoint;
 		std::cout << "URL: " << fullURL << std::endl;
+
+		tmp = headers;
+		std::cout << "HEADERS" << std::endl;
+		while (tmp) {
+			std::cout << tmp->data << std::endl;
+			tmp = tmp->next;
+		}
+		std::cout << "----------" << std::endl;
+
+		std::cout << "PAYLOAD: " << postData << std::endl;
+
+
+		std::string rawRequest = method + " " + endpoint + " HTTP/1.1\r\n";
+		rawRequest += "Host: " + BASE_URL.substr(BASE_URL.find("://") + 3) + "\r\n";
+		for (const auto& header : API_HEADERS) {
+			rawRequest += header.first + ": " + header.second + "\r\n";
+		}
+		rawRequest += "Content-Type: application/json\r\n";
+		rawRequest += "Content-Length: " + std::to_string(postData.length()) + "\r\n";
+		rawRequest += "\r\n";
+		rawRequest += postData;
+
+		std::cout << "RAW HTTP REQUEST\n" << rawRequest << std::endl;
 
 		curl_easy_setopt(curl, CURLOPT_URL, fullURL.c_str());
 		curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
@@ -91,29 +111,34 @@ nlohmann::json Tradier::sendRequest(const std::string& endpoint, const std::stri
 		}
 
 		CURLcode res = curl_easy_perform(curl);
-		if (res != CURLE_OK) {
-			std::cerr << "curl failed " << curl_easy_strerror(res) << std::endl;
+		long response_code = 0;
+		curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &response_code);
+
+		if (res == CURLE_OK && response_code == 200) {
+			try {
+				jsonResult = nlohmann::json::parse(readBuffer);
+			} catch (nlohmann::json::exception& e) {
+				std::cerr << "JSON PARSE ERROR: " << e.what() << std::endl;
+				std::cerr << "RAW RESPONSE: " << readBuffer << std::endl;
+				jsonResult = nlohmann::json();
+			}
+		} else {
+			// std::cout << std::endl;
+			std::cerr << "cURL ERROR: " << curl_easy_strerror(res) << std::endl;
+			std::cerr << "HTTP RESPONSE CODE: " << response_code << std::endl;
+			std::cerr << "RESPONSE CONTENT: " << readBuffer << std::endl;
+			jsonResult = nlohmann::json();
 		}
 
 		curl_slist_free_all(headers);
 		curl_easy_cleanup(curl);
 	} else {
-		std::cerr << "Failed CURL initialization." << std::endl;
-	}
-
-	try {
-		jsonResult = nlohmann::json::parse(readBuffer);
-		if (jsonResult.is_null()) {
-			std::cerr << "no api data" << std::endl;
-		}
-	} catch (nlohmann::json::exception& e) {
-		std::cerr << "JSON PARSE ERROR " << e.what() << std::endl;
-		return nlohmann::json();
+		std::cerr << "FAILED CURL INIT" << std::endl;
+		jsonResult = nlohmann::json();
 	}
 
 	return jsonResult;
 }
-
 
 
 //

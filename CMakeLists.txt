@@ -27,6 +27,8 @@ set(COMMON_SRC
 	src/Account.cpp
 	src/EnvReader.cpp
 	src/TradierHTTPConnect.cpp
+	src/EquityOrder.cpp
+	src/OptionsOrder.cpp
 )
 
 
