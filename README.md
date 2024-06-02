@@ -22,12 +22,16 @@ TradierCPP/
 ├── include/          - Header files
 │   └── Account.h
 │   └── EnvReader.h
+│   └── EquityOrder.h
+│   └── OptionsOrder.h
 │   └── Tradier.h
 │
 ├── src/              - Source files
 │   ├── Tradier.cpp
 │   ├── Account.cpp
 │   ├── EnvReader.cpp
+│   ├── EquityOrder.cpp
+│   ├── OptionsOrder.cpp
 │   ├── main.cpp
 │   ├── main_stream.cpp
 │   ├── main_dataprocess.cpp
