@@ -1,13 +1,14 @@
 // FILE: `src/Tradier.cpp`
-#include "Tradier.h"
-#include <iostream>
-#include <fstream>
 #include <boost/asio/ssl.hpp>
 #include <boost/beast.hpp>
 #include <boost/beast/ssl.hpp>
 #include <boost/asio/ssl/context.hpp>
 #include <boost/beast/websocket/ssl.hpp>
 #include <boost/asio/ssl/stream.hpp>
+#include <fstream>
+#include <iostream>
+
+#include "Tradier.h"
 
 
 Tradier::Tradier(const std::string& accountNumber, const std::string& authToken, bool liveTrade)
@@ -56,6 +57,9 @@ nlohmann::json Tradier::sendPostRequest(const std::string& endpoint, const std::
 
 //
 // Base API HTTP Request Function
+// 	• This function is NOT intended to be called directly.
+// 	• GET Request 	-> Tradier::sendGetRequest
+// 	• POST Request 	-> Tradier::sendPostRequest
 //
 
 nlohmann::json Tradier::sendRequest(const std::string& endpoint, const std::string& method, const std::string& postData) const {

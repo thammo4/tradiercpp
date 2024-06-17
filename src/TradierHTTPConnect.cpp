@@ -1,6 +1,6 @@
 // FILE: `src/TradierHTTPConnect.cpp`
-#include "Tradier.h"
 #include <iostream>
+#include "Tradier.h"
 
 nlohmann::json Tradier::startMarketSession() const {
 	std::string endpoint = "/v1/markets/events/session";

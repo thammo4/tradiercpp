@@ -14,9 +14,6 @@ public:
 	nlohmann::json getPositions(const std::vector<std::string>& symbols={}, bool equities=false, bool options=false) const;
 
 private:
-	std::string accountNumber;
-	std::string authToken;
-	bool liveTrade;
 
 	//
 	// Define Account API Endpoints

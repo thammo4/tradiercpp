@@ -29,6 +29,7 @@ set(COMMON_SRC
 	src/TradierHTTPConnect.cpp
 	src/EquityOrder.cpp
 	src/OptionsOrder.cpp
+	src/EquitiesData.cpp
 )
 
 

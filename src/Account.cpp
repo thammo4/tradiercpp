@@ -1,7 +1,6 @@
 // FILE: `src/Account.cpp`
-
-#include "Account.h"
 #include <iostream>
+#include "Account.h"
 
 Account::Account(const std::string& accountNumber, const std::string& authToken, bool liveTrade) : Tradier(accountNumber, authToken, liveTrade) {
 
@@ -54,7 +53,6 @@ nlohmann::json Account::getGainLoss() const {
 		return {};
 	}
 	nlohmann::json gainLoss = sendGetRequest(endpoint);
-	std::cout << "GAINS/LOSSES\n" << gainLoss.dump(4) << std::endl;
 	return gainLoss;
 }
 
@@ -69,14 +67,14 @@ nlohmann::json Account::getPositions(const std::vector<std::string>& symbols, bo
 	std::string endpoint = POSITIONS_ENDPOINT;
 	size_t pos = endpoint.find("{account_id}");
 
+	nlohmann::json positions;
+
 	if (pos != std::string::npos) {
 		endpoint.replace(pos, std::string("{account_id}").length(), ACCOUNT_NUMBER);
+		positions = sendGetRequest(endpoint);
 	} else {
 		std::cerr << "No account ID in URL string [getPositions]." << std::endl;
-		return {};
-
-	nlohmann::json positions = sendGetRequest(endpoint);
-
-	return {};
+		positions = nlohmann::json();
 	}
+	return positions;
 }

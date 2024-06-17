@@ -1,5 +1,4 @@
 // FILE: `include/OptionsOrder.h`
-
 #ifndef OPTIONSORDER_H
 #define OPTIONSORDER_H
 

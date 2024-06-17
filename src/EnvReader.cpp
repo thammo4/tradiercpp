@@ -1,10 +1,11 @@
 // FILE: `src/EnvReader.cpp`
-#include "EnvReader.h"
-#include <iostream>
 #include <fstream>
-#include <sstream>
+#include <iostream>
 #include <map>
+#include <sstream>
 #include <string>
+
+#include "EnvReader.h"
 
 
 std::string trim(const std::string& str) {

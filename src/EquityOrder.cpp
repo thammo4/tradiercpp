@@ -1,6 +1,6 @@
 // FILE: `src/EquityOrder.cpp`
-#include "EquityOrder.h"
 #include <iostream>
+#include "EquityOrder.h"
 
 EquityOrder::EquityOrder(const std::string& accountNumber, const std::string& authToken, bool liveTrade) : Tradier(accountNumber, authToken, liveTrade) {
 	ORDER_ENDPOINT = "/v1/accounts/" + accountNumber + "/orders";
@@ -33,5 +33,5 @@ nlohmann::json EquityOrder::order(
 
 	std::cout << "PARAMS [EquityOrder] " << params << std::endl;
 
-	return sendRequest(ORDER_ENDPOINT, "POST", params);
+	return sendPostRequest(ORDER_ENDPOINT, params);
 }

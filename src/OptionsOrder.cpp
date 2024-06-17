@@ -1,6 +1,6 @@
 // FILE: `src/OptionsOrder.cpp`
-#include "OptionsOrder.h"
 #include <iostream>
+#include "OptionsOrder.h"
 
 
 //
@@ -38,6 +38,6 @@ nlohmann::json OptionsOrder::order(
 	std::string params = paramsStream.str();
 	std::cout << "PARAMS [OptionsOrder] " << params << std::endl;
 
-	return sendRequest(ORDER_ENDPOINT, "POST", params);
+	return sendPostRequest(ORDER_ENDPOINT, params);
 
 }

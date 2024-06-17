@@ -1,16 +1,17 @@
 // FILE: `src/main.cpp`
-#include "Tradier.h"
 #include "Account.h"
 #include "EnvReader.h"
+#include "EquitiesData.h"
 #include "EquityOrder.h"
 #include "OptionsOrder.h"
+#include "Tradier.h"
 #include <iostream>
 #include <thread>
 
 int main() {
+
 	//
 	// Read authorization token, account number from Python-style environment file
-	//
 	//
 
 	auto env = loadEnv("../.env");
@@ -19,12 +20,68 @@ int main() {
 	bool liveTrade = false;
 
 	//
-	// Instantiate Account, EquityOrder classes
+	// Instantiate Account, EquitiesData, EquityOrder, OptionsOrder classes
 	//
 
 	Account myAccount(accountNumber, authToken, liveTrade);
 	EquityOrder equityOrder(accountNumber, authToken, liveTrade);
 	OptionsOrder optionsOrder(accountNumber, authToken, liveTrade);
+	EquitiesData equitiesData(accountNumber, authToken, liveTrade);
+
+	//
+	// Retrieve general account information
+	//
+
+	std::cout << "ACCOUNT DETAILS" << std::endl;
+	myAccount.fetchAccountDetails();
+	std::cout << "----------\n" << std::endl;
+
+	//
+	// Fetch balance details
+	//
+
+	std::cout << "ACCOUNT BALANCE DETAILS" << std::endl;
+	myAccount.fetchBalances();
+	std::cout << "----------\n" << std::endl;
+
+
+	//
+	// Fetch account gain/loss information
+	//
+
+	std::cout << "GAIN/LOSS INFORMATION" << std::endl;
+	auto gainLoss = myAccount.getGainLoss();
+	std::cout << gainLoss << std::endl;
+	std::cout << "---------\n" << std::endl;
+
+
+	//
+	// Fetch Current Positions
+	//
+
+	std::cout << "CURRENT POSITIONS" << std::endl;
+	auto positions = myAccount.getPositions();
+	std::cout << positions << std::endl;
+	std::cout << "----------\n" << std::endl;
+
+
+	//
+	// Fetch Current Quote for ConocoPhillips and Invesco QQQ Trust, Series 1
+	//
+
+	std::string symbolList = "COP,QQQ";
+	auto copQuote = equitiesData.getQuotes(symbolList);
+	std::cout << copQuote << std::endl;
+
+	std::cout << "----------" << std::endl;
+
+	std::cout << "COP" << std::endl;
+	std::cout << copQuote[0] << std::endl;
+	std::cout << "\n" << std::endl;
+
+	std::cout << "QQQ" << std::endl;
+	std::cout << copQuote[1] << std::endl;
+	std::cout << "\n" << std::endl;
 
 
 	//
@@ -41,7 +98,6 @@ int main() {
 	std::string duration = "day";
 
 	std::cout << "!!!!!! OPTIONS ORDER !!!!!" << std::endl;
-
 	auto response = optionsOrder.order(occSymbol, orderType, side, quantity, underlying, limitPrice, stopPrice, duration);
 	std::cout << "Broker Response: " << response.dump(4) << std::endl;
 
@@ -55,9 +111,6 @@ int main() {
 
 	std::string symbol = "AAPL";
 	std::string equitySide = "buy";
-	// int quantity = 5;
-	// // std::string quantity = "5";
-	// std::string orderType = "market";
 
 	try {
 		auto response = equityOrder.order(symbol, equitySide, quantity, orderType);
@@ -68,45 +121,3 @@ int main() {
 
 	return 0;
 }
-
-	// //
-	// // Retrieve general account information
-	// //
-
-	// myAccount.fetchAccountDetails();
-	// std::cout << "----------\n" << std::endl;
-
-	// //
-	// // Fetch balance details
-	// //
-
-	// myAccount.fetchBalances();
-	// std::cout << "----------\n" << std::endl;
-
-
-	// //
-	// // Fetch account gain/loss information
-	// //
-
-	// myAccount.getGainLoss();
-
-
-	// //
-	// // Fetch Current Positions
-	// //
-
-	// myAccount.getPositions();
-	// std::cout << "----------\n" << std::endl;
-// }
-
-
-
-
-//
-// OUTPUT
-//
-
-// thammons@toms-MacBook-Air build % ./TradierCPP
-// URL: https://sandbox.tradier.com/v1/accounts/VA36593574/orders
-// JSON PARSE ERROR [json.exception.parse_error.101] parse error at line 1, column 1: syntax error while parsing value - invalid literal; last read: '<'
-// Broker Response: null
