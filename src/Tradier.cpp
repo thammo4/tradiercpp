@@ -84,7 +84,7 @@ nlohmann::json Tradier::sendRequest(const std::string& endpoint, const std::stri
 			std::cout << tmp->data << std::endl;
 			tmp = tmp->next;
 		}
-		std::cout << "----------" << std::endl;
+		std::cout << std::endl;
 
 		std::cout << "PAYLOAD: " << postData << std::endl;
 
