@@ -24,6 +24,7 @@ TradierCPP/
 ├── include/          - Header files
 │   └── Account.h
 │   └── EnvReader.h
+│   └── EquityData.h
 │   └── EquityOrder.h
 │   └── OptionsOrder.h
 │   └── Tradier.h
@@ -32,6 +33,7 @@ TradierCPP/
 │   ├── Tradier.cpp
 │   ├── Account.cpp
 │   ├── EnvReader.cpp
+│   ├── EquityData.cpp
 │   ├── EquityOrder.cpp
 │   ├── OptionsOrder.cpp
 │   ├── main.cpp
