@@ -4,6 +4,7 @@
 #include "EquitiesData.h"
 #include "EquityOrder.h"
 #include "OptionsOrder.h"
+#include "OptionsData.h"
 #include "Tradier.h"
 #include <iostream>
 #include <iomanip>
@@ -66,13 +67,14 @@ int main() {
 	bool liveTrade = false;
 
 	//
-	// Instantiate Account, EquitiesData, EquityOrder, OptionsOrder classes
+	// Instantiate Account, EquitiesData, EquityOrder, OptionsOrder, OptionsData classes
 	//
 
 	Account myAccount(accountNumber, authToken, liveTrade);
 	EquityOrder equityOrder(accountNumber, authToken, liveTrade);
 	OptionsOrder optionsOrder(accountNumber, authToken, liveTrade);
 	EquitiesData equitiesData(accountNumber, authToken, liveTrade);
+	OptionsData optionsData(accountNumber, authToken, liveTrade);
 
 	//
 	// Retrieve general account information
@@ -121,15 +123,16 @@ int main() {
 
 	std::cout << "!!!!! QUOTES - DOW 30 !!!!!" << std::endl;
 
-	std::string symbolList = "AMZN,AXP,AMGN,AAPL,BA,CAT,CSCO,CVX,GS,HD,HON,IBM,INTC,JNJ,KO,JPM,MCD,MMM,MRK,MSFT,NKE,PG,TRV,UNH,CRM,VZ,V,WMT,DIS,DOW";
-	auto dowQuotes = equitiesData.getQuotes(symbolList);
-	std::cout << dowQuotes << std::endl;
+	// std::string symbolList = "AMZN,AXP,AMGN,AAPL,BA,CAT,CSCO,CVX,GS,HD,HON,IBM,INTC,JNJ,KO,JPM,MCD,MMM,MRK,MSFT,NKE,PG,TRV,UNH,CRM,VZ,V,WMT,DIS,DOW";
+	// auto symbolListNoDividends = equitiesData.getQuotes(symbolList);
+	// std::string symbolListNoDividends = "AMZN, BKNG, CMG, CRM, SHOP, UBER, SQ, SNAP, GΟΟG";
+	// std::cout << symbolListNoDividends << std::endl;
 
 	//
 	// Print Quotes in Sequential Blocks
 	//
 
-	// for (const auto& quote : dowQuotes) {
+	// for (const auto& quote : symbolListNoDividends) {
 	// 	std::cout << "Symbol: " << quote["symbol"] << std::endl;
 	// 	std::cout << "Ask: " << quote["ask"] << std::endl;
 	// 	std::cout << "Bid: " << quote["bid"] << std::endl;
@@ -151,17 +154,17 @@ int main() {
 			  << std::endl;
 	std::cout << std::setfill('-') << std::setw(55) << "" << std::setfill(' ') << std::endl;
 
-	for (const auto& quote : dowQuotes) {
-		std::cout << std::left
-				  << std::setw(10) << quote["symbol"].get<std::string>() << std::fixed << std::setprecision(2)
-				  << std::setw(10) << quote["ask"].get<double>()
-				  << std::setw(10) << quote["bid"].get<double>()
-				  << std::setw(10) << quote["change"].get<double>()
-				  << std::setw(10) << quote["change_percentage"].get<double>()
-				  << std::endl;
-	}
-	std::cout << std::setfill('-') << std::setw(55) << "" << std::setfill(' ') << std::endl;
-	std::cout << std::endl;
+	// for (const  quote : symbolListNoDividends) {
+	// 	std::cout << std::left
+	// 			  << std::setw(10) << quote["symbol"].get<std::string>() << std::fixed << std::setprecision(2)
+	// 			  << std::setw(10) << quote["ask"].get<double>()
+	// 			  << std::setw(10) << quote["bid"].get<double>()
+	// 			  << std::setw(10) << quote["change"].get<double>()
+	// 			  << std::setw(10) << quote["change_percentage"].get<double>()
+	// 			  << std::endl;
+	// }
+	// std::cout << std::setfill('-') << std::setw(55) << "" << std::setfill(' ') << std::endl;
+	// std::cout << std::endl;
 
 
 	//
@@ -206,7 +209,6 @@ int main() {
 	std::string duration = "day";
 
 	auto response = optionsOrder.order(occSymbol, orderType, side, quantity, underlying, limitPrice, stopPrice, duration);
-	// std::cout << "Broker Response: " << response.dump(4) << std::endl;
 	std::cout << std::setfill('-') << std::setw(55) << "" << std::setfill(' ') << std::endl;
 	std::cout << std::endl;
 
@@ -226,6 +228,33 @@ int main() {
 	} catch (const std::exception& e) {
 		std::cerr << "Exception occurred: " << e.what() << std::endl;
 	}
+
+
+	//
+	// OPTIONS DATA
+	//
+
+	std::cout << "!!!!! EQUITY DATA !!!!!" << std::endl;
+
+	nlohmann::json dupontChain = optionsData.getChain("DD", "2024-06-28");
+	std::cout << "Dupont Chain: " << dupontChain.dump(4) << std::endl;
+	std::cout << std::endl;
+
+	nlohmann::json dupontStrikes = optionsData.getStrikesForExpiry("DD", "2024-06-28");
+	std::cout << "Dupont Strikes Jun28: " << dupontStrikes.dump(4) << std::endl;
+	std::cout << std::endl;
+
+	nlohmann::json dupontContracts = optionsData.getOptionsContracts("DD", true, true, true);
+	std::cout << "Dupont Contracts: " << dupontContracts << std::endl;
+	std::cout << std::endl;
+
+	nlohmann::json dupontOccs = optionsData.getOccsFromUnderlying("DD");
+	std::cout << "Dupont OCC Symbols" << std::endl;
+	std::cout << dupontOccs << std::endl;
+	std::cout << std::endl;
+
+	std::cout << std::setfill('-') << std::setw(55) << "" << std::setfill(' ') << std::endl;
+	std::cout << std::endl;
 
 	return 0;
 }
@@ -275,4 +304,6 @@ int main() {
 
 
 //
-// 
+// ERROR
+//
+

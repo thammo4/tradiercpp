@@ -30,6 +30,7 @@ set(COMMON_SRC
 	src/EquityOrder.cpp
 	src/OptionsOrder.cpp
 	src/EquitiesData.cpp
+	src/OptionsData.cpp
 )
 
 
