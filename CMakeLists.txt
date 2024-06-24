@@ -1,6 +1,6 @@
 # FILE: `CMakeLists.txt`
 
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.12)
 project(TradierCPP VERSION 1.0)
 
 #
@@ -11,7 +11,8 @@ project(TradierCPP VERSION 1.0)
 # set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -v")
 
 
-set(CMAKE_CXX_STANDARD 17)
+# set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 #
@@ -21,6 +22,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 include_directories(include
 	/opt/homebrew/Cellar/nlohmann-json/3.11.3/include
 	/opt/homebrew/Cellar/quantlib/1.34/include
+	lib/DataFrame/include
 )
 
 #
@@ -70,7 +72,16 @@ target_link_libraries(TradierDataProcess PRIVATE Boost::system Boost::thread Boo
 
 
 #
-# Define Executable - QuantLib Options Pricing
+# Define Executable - QuantLib Integration Example
+#
+
+add_executable(PANWExample src/main_panwEX.cpp ${COMMON_SRC})
+target_include_directories(PANWExample PRIVATE ${Boost_INCLUDE_DIRS} ${CURL_INCLUDE_DIR} ${OPENSSL_INCLUDE_DIR} /opt/homebrew/Cellar/quantlib/1.34/include)
+target_link_libraries(PANWExample PRIVATE ${CURL_LIBRARIES} ${Boost_LIBRARIES} OpenSSL::SSL Boost::system Boost::thread Boost::coroutine Boost::context Boost::math_c99 /opt/homebrew/Cellar/quantlib/1.34/lib/libQuantLib.dylib)
+
+
+#
+# Define Executable - QuantLib/TradierCPP Black-Scholes Options Pricing Model
 #
 
 add_executable(TradierQLib src/main_tradierqlib.cpp ${COMMON_SRC})
