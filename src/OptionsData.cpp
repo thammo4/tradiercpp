@@ -2,6 +2,11 @@
 #include <iostream>
 #include "OptionsData.h"
 
+
+//
+// OptionsData Constructor
+//
+
 OptionsData::OptionsData (const std::string& accountNumber, const std::string& authToken, bool liveTrade)
 	: Tradier(accountNumber, authToken, liveTrade),
 	  OPTIONS_CHAINS_ENDPOINT("/v1/markets/options/chains"), 			// OptionsData::getChain
@@ -12,6 +17,11 @@ OptionsData::OptionsData (const std::string& accountNumber, const std::string& a
 	// whadduhya got whadduhya got
 }
 
+
+//
+// OptionsData Destructor
+//
+
 OptionsData::~OptionsData () {}
 
 
@@ -21,8 +31,6 @@ OptionsData::~OptionsData () {}
 //
 
 nlohmann::json OptionsData::getChain(const std::string& symbol, const std::string& expiry, const bool greekAndVol) const {
-	std::cout << "hello, getChain!" << std::endl;
-
 	std::string endpoint = OPTIONS_CHAINS_ENDPOINT + "?symbol=" + symbol
 												   + "&expiration=" + expiry
 												   + "&greeks=" + std::to_string(greekAndVol);
@@ -44,8 +52,6 @@ nlohmann::json OptionsData::getChain(const std::string& symbol, const std::strin
 //
 
 nlohmann::json OptionsData::getStrikesForExpiry(const std::string& symbol, const std::string& expiry, const bool includeAllRoots) const {
-	std::cout << "hello, getStrikesForExpiry!" << std::endl;
-
 	std::string endpoint = OPTIONS_STRIKES_ENDPOINT + "?symbol=" + symbol
 													+ "&expiration=" + expiry
 													+ "&includeAllRoots=" + std::to_string(includeAllRoots);
@@ -63,13 +69,11 @@ nlohmann::json OptionsData::getStrikesForExpiry(const std::string& symbol, const
 
 
 //
-// Get Spect About Options Contracts
+// Get Specs About Options Contracts
 // Ex: {"contract_size":100,"date":"2024-06-28","expiration_type":"quarterlys"}
 //
 
 nlohmann::json OptionsData::getOptionsContracts(const std::string& symbol, bool strikePrice, bool contractSize, bool expiryFreq) const {
-	std::cout << "hello, getOptionsContracts!" << std::endl;
-
 	std::string endpoint = OPTIONS_EXPIRIES_ENDPOINT + "?symbol=" + symbol
 													 + "&strikePrice=" + std::to_string(strikePrice)
 													 + "&contractSize=" + std::to_string(contractSize)
@@ -91,7 +95,6 @@ nlohmann::json OptionsData::getOptionsContracts(const std::string& symbol, bool 
 //
 
 nlohmann::json OptionsData::getOccsFromUnderlying(const std::string& symbol) const {
-	std::cout << "hello, getOccsFromUnderlying!" << std::endl;
 	std::string endpoint = OPTIONS_LOOKUP_ENDPOINT + "?underlying=" + symbol;
 	try {
 		auto response = sendGetRequest(endpoint);

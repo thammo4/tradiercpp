@@ -76,30 +76,30 @@ nlohmann::json Tradier::sendRequest(const std::string& endpoint, const std::stri
 		}
 
 		std::string fullURL = BASE_URL + endpoint;
-		std::cout << "URL: " << fullURL << std::endl;
+		// std::cout << "URL: " << fullURL << std::endl;
 
 		tmp = headers;
-		std::cout << "HEADERS" << std::endl;
-		while (tmp) {
-			std::cout << tmp->data << std::endl;
-			tmp = tmp->next;
-		}
-		std::cout << std::endl;
+		// std::cout << "HEADERS" << std::endl;
+		// while (tmp) {
+		// 	std::cout << tmp->data << std::endl;
+		// 	tmp = tmp->next;
+		// }
+		// std::cout << std::endl;
 
-		std::cout << "PAYLOAD: " << postData << std::endl;
+		// std::cout << "PAYLOAD: " << postData << std::endl;
 
 
-		std::string rawRequest = method + " " + endpoint + " HTTP/1.1\r\n";
-		rawRequest += "Host: " + BASE_URL.substr(BASE_URL.find("://") + 3) + "\r\n";
-		for (const auto& header : API_HEADERS) {
-			rawRequest += header.first + ": " + header.second + "\r\n";
-		}
-		rawRequest += "Content-Type: application/json\r\n";
-		rawRequest += "Content-Length: " + std::to_string(postData.length()) + "\r\n";
-		rawRequest += "\r\n";
-		rawRequest += postData;
+		// std::string rawRequest = method + " " + endpoint + " HTTP/1.1\r\n";
+		// rawRequest += "Host: " + BASE_URL.substr(BASE_URL.find("://") + 3) + "\r\n";
+		// for (const auto& header : API_HEADERS) {
+		// 	rawRequest += header.first + ": " + header.second + "\r\n";
+		// }
+		// rawRequest += "Content-Type: application/json\r\n";
+		// rawRequest += "Content-Length: " + std::to_string(postData.length()) + "\r\n";
+		// rawRequest += "\r\n";
+		// rawRequest += postData;
 
-		std::cout << "RAW HTTP REQUEST\n" << rawRequest << std::endl;
+		// std::cout << "RAW HTTP REQUEST\n" << rawRequest << std::endl;
 
 		curl_easy_setopt(curl, CURLOPT_URL, fullURL.c_str());
 		curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
